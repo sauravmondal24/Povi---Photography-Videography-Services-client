@@ -1,11 +1,22 @@
-import React from 'react';
+import Blog from '../components/Blog/Blog';
+import Home from '../components/Home/Home';
+import Main from '../Layout/Main/Main';
 
-const Router = () => {
-	return (
-		<div>
-			<h2>main router</h2>
-		</div>
-	);
-};
+const { createBrowserRouter } = require('react-router-dom');
 
-export default Router;
+export const routers = createBrowserRouter([
+	{
+		path: '/',
+		element: <Main></Main>,
+		children: [
+			{
+				path: '/',
+				element: <Home></Home>
+			},
+			{
+				path: '/blog',
+				element: <Blog></Blog>
+			}
+		]
+	}
+]);
