@@ -1,12 +1,57 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { FaGoogle, FaGithub } from 'react-icons/fa';
+import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
+	const { signIn, createUserWithGoogle, createUserWithGitHub } =
+		useContext(AuthContext);
+	const navigate = useNavigate();
+	const location = useLocation();
+	const from = location.state?.from?.pathname || '/';
+
+	const googleAuthProvider = new GoogleAuthProvider();
+	const githubAuthProvider = new GithubAuthProvider();
+	const handleLogin = (event) => {
+		event.preventDefault();
+		const email = event.target.email.value;
+		const password = event.target.password.value;
+
+		signIn(email, password)
+			.then((result) => {
+				const user = result.user;
+				console.log(user);
+				event.target.reset();
+				navigate(from, { replace: true });
+			})
+			.catch((error) => console.error(error));
+	};
+
+	const handleGoogleSignIn = () => {
+		createUserWithGoogle(googleAuthProvider)
+			.then((result) => {
+				const user = result.user;
+				console.log(user);
+				navigate(from, { replace: true });
+			})
+			.catch((error) => console.error('error', error));
+	};
+	const handleGitHubSignIn = () => {
+		createUserWithGitHub(githubAuthProvider)
+			.then((result) => {
+				const user = result.user;
+				console.log(user);
+				navigate(from, { replace: true });
+			})
+			.catch((error) => console.error('error', error));
+	};
 	return (
 		<div style={{ backgroundColor: '#242E37' }} className="">
 			<div className="w-25 m-auto py-5 ">
-				<form>
+				<form onSubmit={handleLogin}>
 					<div className="card text-start p-4 fw-bold">
 						<h2 className="text-center fw-bold py-3 fs-1">Login Now!</h2>
 						<div class="mb-3">
@@ -44,15 +89,20 @@ const Login = () => {
 								Check me out
 							</label>
 						</div>
+						<div class="mb-3 form-check">
+							<small>
+								Create a new account <Link to="/signup">Signup here!</Link>
+							</small>
+						</div>
 
 						<button type="submit" class="btn btn-primary">
 							LOGIN
 						</button>
 						<div className="text-center py-3">
-							<Link className="fs-4 mx-2">
+							<Link onClick={handleGoogleSignIn} className="fs-4 mx-2">
 								<FaGoogle></FaGoogle>
 							</Link>
-							<Link className="fs-4 mx-2">
+							<Link onClick={handleGitHubSignIn} className="fs-4 mx-2">
 								<FaGithub></FaGithub>
 							</Link>
 						</div>

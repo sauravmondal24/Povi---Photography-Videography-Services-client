@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../../assets/img/logo-white.png';
+import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
+import { FaUser } from 'react-icons/fa';
 
 const Navbar = () => {
+	const { user, logOut } = useContext(AuthContext);
+
+	const handleLogOut = () => {
+		logOut()
+			.then(() => {})
+			.catch((error) => {
+				console.error(error);
+			});
+	};
 	return (
 		<div>
 			<nav className="navbar navbar-expand-lg bg-dark py-3">
@@ -51,18 +62,58 @@ const Navbar = () => {
 									My Reviews
 								</Link>
 							</li>
-							{/* <li className="nav-item">
-								<Link to="/" className="nav-link text-white fs-5" href="#">
-									Blog
-								</Link>
-							</li> */}
 						</ul>
-						<div className="d-flex" role="search">
-							<button className="btn btn-outline-success" type="submit">
+						<div className="d-flex align-items-center" role="search">
+							<div>
+								{user ? (
+									<>
+										<span>{user?.displayName}</span>
+										<button onClick={handleLogOut} className="btn btn-warning">
+											LogOut
+										</button>
+									</>
+								) : (
+									<>
+										<div className="btn-group ">
+											<Link to="/login" className="btn  btn-active btn-success">
+												LogIn
+											</Link>
+											<Link to="/signup" className="btn btn-primary">
+												SignUp
+											</Link>
+										</div>
+									</>
+								)}
+							</div>
+
+							<div className="text-center">
+								<Link>
+									{user?.photoURL ? (
+										<img
+											className="img-fluid circle"
+											style={{ height: '30px' }}
+											src={user?.photoURL}
+											alt=""
+										/>
+									) : (
+										<FaUser className="fs-3 mx-2"></FaUser>
+									)}
+								</Link>
+							</div>
+							{/* <button className="btn btn-outline-success" type="submit">
 								<Link to="/login" className="nav-link text-white " href="#">
 									Login
 								</Link>
 							</button>
+							<button className="btn btn-outline-success" type="submit">
+								<Link
+									onClick={handleLogOut}
+									className="nav-link text-white "
+									href="#"
+								>
+									Logout
+								</Link>
+							</button> */}
 						</div>
 					</div>
 				</div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ServicesItem = () => {
 	return (
@@ -26,12 +27,12 @@ const ServicesItem = () => {
 								</div>
 
 								<div class="card-body">
-									<a href="#" class="card-link">
+									<Link href="#" class="card-link">
 										Card link
-									</a>
-									<a href="#" class="card-link">
+									</Link>
+									<Link href="#" class="card-link">
 										Another link
-									</a>
+									</Link>
 								</div>
 							</div>
 						</div>
@@ -53,12 +54,12 @@ const ServicesItem = () => {
 								</div>
 
 								<div class="card-body">
-									<a href="#" class="card-link">
+									<Link href="#" class="card-link">
 										Card link
-									</a>
-									<a href="#" class="card-link">
+									</Link>
+									<Link href="#" class="card-link">
 										Another link
-									</a>
+									</Link>
 								</div>
 							</div>
 						</div>
@@ -80,12 +81,12 @@ const ServicesItem = () => {
 								</div>
 
 								<div class="card-body">
-									<a href="#" class="card-link">
+									<Link href="#" class="card-link">
 										Card link
-									</a>
-									<a href="#" class="card-link">
+									</Link>
+									<Link href="#" class="card-link">
 										Another link
-									</a>
+									</Link>
 								</div>
 							</div>
 						</div>
@@ -107,12 +108,12 @@ const ServicesItem = () => {
 								</div>
 
 								<div class="card-body">
-									<a href="#" class="card-link">
+									<Link href="#" class="card-link">
 										Card link
-									</a>
-									<a href="#" class="card-link">
+									</Link>
+									<Link href="#" class="card-link">
 										Another link
-									</a>
+									</Link>
 								</div>
 							</div>
 						</div>
