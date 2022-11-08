@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const AllServicesItem = ({ service }) => {
-	const { _id, name, photoULR, description } = service;
+	const { _id, name, photoULR, description, price } = service;
 	return (
 		<div>
 			<div className="container">
@@ -16,18 +16,19 @@ const AllServicesItem = ({ service }) => {
 						className="img-fluid card-img-top"
 						alt="..."
 					/>
-					<div className="card-body ">
+					<div className="card-body text-start">
 						<h5 className="card-title">{name.slice(0, 20) + '...'}</h5>
 						<p className="card-text">{description.slice(0, 100) + '...'}</p>
 					</div>
 
-					<div className="card-footer">
+					<div className="card-footer d-flex justify-content-between align-items-center">
+						<h5>Price: ${price}</h5>
 						<button className="btn btn-outline-success">
 							<Link
-								to={`/serviceDetails/${_id}`}
+								to={`/services/${_id}`}
 								className="text-info text-decoration-none"
 							>
-								MORE DETAILS
+								VIEW DETAILS
 							</Link>
 						</button>
 					</div>

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import useTitle from '../../hooks/useTitle';
 import AllServicesItem from './AllServicesItem';
 
@@ -20,8 +19,11 @@ const Services = () => {
 			<div className="container">
 				<div>
 					<h5 className="fs-1 text-uppercase">All SERVICES</h5>
+					<hr />
 				</div>
-				<h4>All services{services.length}</h4>
+				<h5 className="text-start text-info">
+					Total services: {services.length}
+				</h5>
 				<div className="servicesItem">
 					{services.map((service) => (
 						<AllServicesItem

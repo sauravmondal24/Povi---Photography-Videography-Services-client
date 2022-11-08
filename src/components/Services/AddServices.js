@@ -44,7 +44,7 @@ const AddServices = () => {
 			.catch((error) => console.error(error));
 	};
 	return (
-		<div style={{ backgroundColor: '#242E37' }} className="">
+		<div className="bg-dark">
 			<div className="w-50 m-auto py-5 ">
 				<form onSubmit={servicesHandle}>
 					<div className="card text-start p-4 fw-bold">

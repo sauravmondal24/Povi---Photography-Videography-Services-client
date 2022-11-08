@@ -16,7 +16,10 @@ const Navbar = () => {
 	};
 	return (
 		<div>
-			<nav className="navbar navbar-expand-lg bg-dark py-3">
+			<nav
+				style={{ backgroundColor: '#242E37' }}
+				className="navbar navbar-expand-lg  py-3"
+			>
 				<div className="container">
 					<Link to="/" className="navbar-brand" href="#">
 						<img className="img-fluid" src={Logo} alt="" />
@@ -91,12 +94,12 @@ const Navbar = () => {
 								)}
 							</div>
 
-							<div className="text-center">
+							<div className="text-center px-2">
 								<Link>
 									{user?.photoURL ? (
 										<img
 											className="img-fluid circle"
-											style={{ height: '30px' }}
+											style={{ height: '35px', borderRadius: '20px' }}
 											src={user?.photoURL}
 											alt=""
 										/>

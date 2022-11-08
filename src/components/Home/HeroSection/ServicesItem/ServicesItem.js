@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const ServicesItem = () => {
+	const [samples, SetSamples] = useState();
+	useEffect(() => {
+		fetch('http://localhost:5000/services/')
+			.then((res) => res.json())
+			.then((data) => SetSamples(data))
+			.catch((error) => console.error(error));
+	}, []);
 	return (
 		<div className="bg-dark text-white py-5">
 			<div className="container ">
 				<h5>OUR SERVICES</h5>
 				<h2 className="fs-1 text-uppercase">We Provide Best Services</h2>
+				<h2> all samples{samples.length}</h2>
 				<div>
 					<div className="row py-4">
 						<div className="col-md-3">

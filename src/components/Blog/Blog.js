@@ -4,8 +4,12 @@ import useTitle from '../../hooks/useTitle';
 const Blog = () => {
 	useTitle('Blog');
 	return (
-		<div style={{ backgroundColor: '#242E37' }} className="py-5 ">
-			<div className="container text-start">
+		<div className="py-5 bg-dark">
+			<div className="text-white container">
+				<h5 className="fs-1 text-uppercase  text-center">BLOG SECTION</h5>
+				<hr />
+			</div>
+			<div className="container text-start py-4">
 				<div className="accordion" id="accordionPanelsStayOpenExample">
 					<div className="accordion-item">
 						<h2 className="accordion-header" id="panelsStayOpen-headingOne">
