@@ -137,6 +137,10 @@ const Footer = () => {
 						</div>
 					</div>
 				</div>
+				<hr />
+				<p className="py-4 text-center">
+					@ Povi. All Rights Reserved By Sauravms IT Group
+				</p>
 			</div>
 		</div>
 	);
