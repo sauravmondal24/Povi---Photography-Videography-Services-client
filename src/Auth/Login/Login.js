@@ -54,48 +54,48 @@ const Login = () => {
 				<form onSubmit={handleLogin}>
 					<div className="card text-start p-4 fw-bold">
 						<h2 className="text-center fw-bold py-3 fs-1">Login Now!</h2>
-						<div class="mb-3">
-							<label for="exampleInputEmail1" class="form-label">
+						<div className="mb-3">
+							<label for="exampleInputEmail1" className="form-label">
 								Email address
 							</label>
 							<input
 								name="email"
 								type="email"
-								class="form-control"
+								className="form-control"
 								id="exampleInputEmail1"
 								aria-describedby="emailHelp"
 								placeholder="Enter your Email"
 							/>
 						</div>
-						<div class="mb-3">
-							<label for="exampleInputPassword1" class="form-label">
+						<div className="mb-3">
+							<label for="exampleInputPassword1" className="form-label">
 								Password
 							</label>
 							<input
 								name="password"
 								type="password"
-								class="form-control"
+								className="form-control"
 								id="exampleInputPassword1"
 								placeholder="Please Enter your password"
 							/>
 						</div>
-						<div class="mb-3 form-check">
+						<div className="mb-3 form-check">
 							<input
 								type="checkbox"
-								class="form-check-input"
+								className="form-check-input"
 								id="exampleCheck1"
 							/>
-							<label class="form-check-label" for="exampleCheck1">
+							<label className="form-check-label" for="exampleCheck1">
 								Check me out
 							</label>
 						</div>
-						<div class="mb-3 form-check">
+						<div className="mb-3 form-check">
 							<small>
 								Create a new account <Link to="/signup">Signup here!</Link>
 							</small>
 						</div>
 
-						<button type="submit" class="btn btn-primary">
+						<button type="submit" className="btn btn-primary">
 							LOGIN
 						</button>
 						<div className="text-center py-3">

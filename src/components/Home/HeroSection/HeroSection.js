@@ -4,16 +4,16 @@ const HeroSection = () => {
 	return (
 		<div style={{ backgroundColor: '#242E37' }} className="py-5 ">
 			<div className="container">
-				<div style={{ backgroundColor: '#242E37' }} class="card mb-3">
-					<div class="row g-0">
-						<div class="col-md-6">
+				<div style={{ backgroundColor: '#242E37' }} className="card mb-3">
+					<div className="row g-0">
+						<div className="col-md-6">
 							<div className="d-flex">
 								<div>
 									<img
 										src={
 											'https://templates.hibootstrap.com/povi/default/assets/img/about/about-img-4.jpg'
 										}
-										class="img-fluid rounded m-4"
+										className="img-fluid rounded m-4"
 										alt="..."
 									/>
 								</div>
@@ -22,19 +22,19 @@ const HeroSection = () => {
 										src={
 											'https://templates.hibootstrap.com/povi/default/assets/img/about/about-img-5.jpg'
 										}
-										class="img-fluid rounded"
+										className="img-fluid rounded"
 										alt="..."
 									/>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-6">
-							<div class="card-body text-start text-white ps-5 pt-5">
-								<h5 class="card-title">ABOUT US</h5>
-								<h2 class="card-title fs-1">
+						<div className="col-md-6">
+							<div className="card-body text-start text-white ps-5 pt-5">
+								<h5 className="card-title">ABOUT US</h5>
+								<h2 className="card-title fs-1">
 									We Are The Leading Video Studio In The Country
 								</h2>
-								<p class="card-text">
+								<p className="card-text">
 									Best Strategic planning dolor sit amet consectetur adipiscing
 									elit. Scel erus isque ametus odio velit auctor nam elit nulla.{' '}
 									<br />
@@ -42,9 +42,9 @@ const HeroSection = () => {
 									nulla molestie, lorem ut facilisis dignissim, ante tortor
 									posuere urna nec sollicitudin mi eros.”
 								</p>
-								<p class="card-text">
+								<p className="card-text">
 									<h4>Beckeet Dariel</h4>
-									<small class="text-muted">Editor & Videographer</small>
+									<small className="text-muted">Editor & Videographer</small>
 								</p>
 							</div>
 						</div>
