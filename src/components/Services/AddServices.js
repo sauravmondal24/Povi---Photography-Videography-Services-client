@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 // import { Link } from 'react-router-dom';
 
 const AddServices = () => {
+	useTitle('Add Services');
 	const { user } = useContext(AuthContext);
 	const servicesHandle = (event) => {
 		event.preventDefault();

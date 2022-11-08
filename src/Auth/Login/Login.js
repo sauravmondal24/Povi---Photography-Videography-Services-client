@@ -5,8 +5,10 @@ import { useLocation } from 'react-router-dom';
 import { FaGoogle, FaGithub } from 'react-icons/fa';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
+import useTitle from '../../hooks/useTitle';
 
 const Login = () => {
+	useTitle('Login');
 	const { signIn, createUserWithGoogle, createUserWithGitHub } =
 		useContext(AuthContext);
 	const navigate = useNavigate();
