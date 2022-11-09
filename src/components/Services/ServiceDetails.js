@@ -20,6 +20,7 @@ const ServiceDetails = () => {
 							<h2 className="text-primary">{name}</h2>
 							<h5>Price: ${price}</h5>
 							<h4>Description</h4>
+
 							<p className="fs-6">{description.slice(0, 300)}</p>
 							<button className="btn btn-danger btn-lg">ADD TO CART</button>
 						</div>

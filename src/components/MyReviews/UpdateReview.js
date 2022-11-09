@@ -1,92 +1,95 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import { useLoaderData } from 'react-router-dom';
 
-const ServiceReview = () => {
+const UpdateReview = () => {
 	const { user } = useContext(AuthContext);
 
-	const handleComments = (event) => {
+	const oldReview = useLoaderData();
+
+	const [review, setReview] = useState(oldReview);
+
+	const handleUpdateComments = (event) => {
 		event.preventDefault();
-		const form = event.target;
-		const name = form.name.value;
-		const email = form.email.value;
-		const photoURL = user?.photoURL || 'Unregister';
-		const comments = form.comments.value;
+		console.log(review);
 
-		const AddReviews = {
-			name,
-			email,
-			photoURL,
-			comments
-		};
-
-		fetch('http://localhost:5000/addreviews', {
-			method: 'POST',
+		fetch(`http://localhost:5000/reviews/${oldReview._id}`, {
+			method: 'PUT',
 			headers: {
 				'content-type': 'application/json'
 			},
-			body: JSON.stringify(AddReviews)
+			body: JSON.stringify(review)
 		})
 			.then((res) => res.json())
 			.then((data) => {
-				if (data.acknowledged) {
-					alert('New Review Added');
-					form.reset();
+				if (data.modifiedCount > 0) {
+					alert('Review Updated Complete');
 				}
-				console.log(data);
 			})
 			.catch((error) => console.error(error));
 	};
-
+	const handelUpdateReview = (event) => {
+		const field = event.target.name;
+		const value = event.target.value;
+		const newReview = { ...review };
+		newReview[field] = value;
+		setReview(newReview);
+	};
 	return (
-		<div>
-			<div className="row">
-				<div className="col-md-6"></div>
-				<div className="col-md-6 card bg-dark p-4 border border-white">
-					<form onSubmit={handleComments}>
-						<h2 className="text-primary">Write Your Comment</h2>
+		<div className="bg-dark p-4 ">
+			<div className="container w-50 text-start my-5">
+				<div className=" card  border border-white fw-bold p-5">
+					<form onSubmit={handleUpdateComments}>
+						<h2 className="text-primary text-center">Update Your Comment</h2>
 						<hr />
 						<div class="mb-3">
 							<label for="exampleInputName" class="form-label">
-								Your Name
+								Update Your Name
 							</label>
 							<input
+								onChange={handelUpdateReview}
 								name="name"
 								type="text"
 								class="form-control"
 								id="exampleInputName"
 								aria-describedby="emailHelp"
 								placeholder="Enter Your Name"
+								defaultValue={oldReview.name}
 							/>
 						</div>
 						<div class="mb-3">
 							<label for="exampleInputEmail1" class="form-label">
-								Email address
+								Update Email address
 							</label>
 							<input
+								onChange={handelUpdateReview}
 								name="email"
 								type="email"
 								class="form-control"
 								id="exampleInputEmail1"
 								aria-describedby="emailHelp"
 								placeholder="Enter your Email"
+								defaultValue={oldReview.email}
 							/>
 						</div>
 						<div class="mb-3">
 							<label for="exampleInputPassword1" class="form-label">
-								Your Comments
+								Update Your Comments
 							</label>
 							<textarea
+								onChange={handelUpdateReview}
 								name="comments"
 								type="text"
 								class="form-control"
 								id="exampleInputPassword1"
 								placeholder="Write your comment here"
 								style={{ height: '100px' }}
+								defaultValue={oldReview.comments}
 							/>
 						</div>
 
 						<button type="submit" class="btn btn-success btn-lg">
-							Submit Review
+							Update Review
 						</button>
 					</form>
 				</div>
@@ -95,4 +98,4 @@ const ServiceReview = () => {
 	);
 };
 
-export default ServiceReview;
+export default UpdateReview;

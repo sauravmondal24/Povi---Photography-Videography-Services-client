@@ -3,6 +3,7 @@ import SignUp from '../Auth/SignUp/SignUp';
 import Blog from '../components/Blog/Blog';
 import Home from '../components/Home/Home';
 import MyReviews from '../components/MyReviews/MyReviews';
+import UpdateReview from '../components/MyReviews/UpdateReview';
 import AddServices from '../components/Services/AddServices';
 import ServiceDetails from '../components/Services/ServiceDetails';
 import Services from '../components/Services/Services';
@@ -58,6 +59,12 @@ export const routers = createBrowserRouter([
 				element: <ServiceDetails></ServiceDetails>,
 				loader: ({ params }) =>
 					fetch(`http://localhost:5000/services/${params.id}`)
+			},
+			{
+				path: '/updateReview/:id',
+				element: <UpdateReview></UpdateReview>,
+				loader: ({ params }) =>
+					fetch(`http://localhost:5000/reviews/${params.id}`)
 			}
 		]
 	},
