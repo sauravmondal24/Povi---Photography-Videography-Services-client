@@ -47,7 +47,7 @@ const AddServices = () => {
 		<div className="bg-dark">
 			<div className="w-50 m-auto py-5 ">
 				<form onSubmit={servicesHandle}>
-					<div className="card text-start p-4 fw-bold">
+					<div className="card text-start p-4 fw-bold fs-5">
 						<h2 className="text-center fw-bold py-3 fs-1">Add Services</h2>
 						<div className="mb-3">
 							<label htmlhtmlFor="exampleInputName" className="form-label">
@@ -105,7 +105,7 @@ const AddServices = () => {
 							/>
 						</div>
 
-						<button type="submit" className="btn btn-primary my-4">
+						<button type="submit" className="btn btn-lg btn-primary my-4">
 							SUBMIT
 						</button>
 					</div>

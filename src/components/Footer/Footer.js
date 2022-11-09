@@ -13,7 +13,10 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
 	return (
-		<div className="bg-dark py-5 text-light text-start">
+		<div
+			style={{ backgroundColor: '#242E37' }}
+			className=" py-5 text-light text-start"
+		>
 			<div className="container">
 				<div className="row">
 					<div className="col-md-3">
