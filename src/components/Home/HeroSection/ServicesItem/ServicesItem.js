@@ -1,130 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import '../../Home.css';
 
-const ServicesItem = () => {
-	const [samples, SetSamples] = useState();
-	useEffect(() => {
-		fetch('http://localhost:5000/services/')
-			.then((res) => res.json())
-			.then((data) => SetSamples(data))
-			.catch((error) => console.error(error));
-	}, []);
+const ServicesItem = ({ serviceItem }) => {
+	const { _id, name, photoULR } = serviceItem;
 	return (
-		<div className="bg-dark text-white py-5">
-			<div className="container ">
-				<h5>OUR SERVICES</h5>
-				<h2 className="fs-1 text-uppercase">We Provide Best Services</h2>
-				<h2> all samples{samples.length}</h2>
-				<div>
-					<div className="row py-4">
-						<div className="col-md-3">
-							<div className="card bg-dark">
-								<img
-									src={
-										'https://templates.hibootstrap.com/povi/default/assets/img/service/service-1.jpg'
-									}
-									className="card-img-top"
-									alt="..."
-								/>
-								<div className="card-body">
-									<h5 className="card-title">Card title</h5>
-									<p className="card-text">
-										Some quick example text to build on the card title and make
-										up the bulk of the card's content.
-									</p>
-								</div>
+		<div>
+			<div>
+				<div
+					style={{ height: '400px', backgroundColor: '#ededed' }}
+					className="card  text-dark my-3 p-2 shadow"
+				>
+					<img
+						style={{ height: '250px' }}
+						src={photoULR}
+						className="img-fluid card-img-top"
+						alt="..."
+					/>
+					<div className="card-body">
+						<h5 className="card-title text-dark">{name}</h5>
 
-								<div className="card-body">
-									<Link href="#" className="card-link">
-										Card link
-									</Link>
-									<Link href="#" className="card-link">
-										Another link
-									</Link>
-								</div>
-							</div>
-						</div>
-						<div className="col-md-3">
-							<div className="card bg-dark">
-								<img
-									src={
-										'https://templates.hibootstrap.com/povi/default/assets/img/service/service-1.jpg'
-									}
-									className="card-img-top"
-									alt="..."
-								/>
-								<div className="card-body">
-									<h5 className="card-title">Card title</h5>
-									<p className="card-text">
-										Some quick example text to build on the card title and make
-										up the bulk of the card's content.
-									</p>
-								</div>
-
-								<div className="card-body">
-									<Link href="#" className="card-link">
-										Card link
-									</Link>
-									<Link href="#" className="card-link">
-										Another link
-									</Link>
-								</div>
-							</div>
-						</div>
-						<div className="col-md-3">
-							<div className="card bg-dark">
-								<img
-									src={
-										'https://templates.hibootstrap.com/povi/default/assets/img/service/service-1.jpg'
-									}
-									className="card-img-top"
-									alt="..."
-								/>
-								<div className="card-body">
-									<h5 className="card-title">Card title</h5>
-									<p className="card-text">
-										Some quick example text to build on the card title and make
-										up the bulk of the card's content.
-									</p>
-								</div>
-
-								<div className="card-body">
-									<Link href="#" className="card-link">
-										Card link
-									</Link>
-									<Link href="#" className="card-link">
-										Another link
-									</Link>
-								</div>
-							</div>
-						</div>
-						<div className="col-md-3">
-							<div className="card bg-dark">
-								<img
-									src={
-										'https://templates.hibootstrap.com/povi/default/assets/img/service/service-1.jpg'
-									}
-									className="card-img-top"
-									alt="..."
-								/>
-								<div className="card-body">
-									<h5 className="card-title">Card title</h5>
-									<p className="card-text">
-										Some quick example text to build on the card title and make
-										up the bulk of the card's content.
-									</p>
-								</div>
-
-								<div className="card-body">
-									<Link href="#" className="card-link">
-										Card link
-									</Link>
-									<Link href="#" className="card-link">
-										Another link
-									</Link>
-								</div>
-							</div>
-						</div>
+						<Link to={`/services/${_id}`} className="btn btn-primary">
+							ALL SERVICES
+						</Link>
 					</div>
 				</div>
 			</div>

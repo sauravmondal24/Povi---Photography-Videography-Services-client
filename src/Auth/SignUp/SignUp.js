@@ -32,10 +32,10 @@ const SignUp = () => {
 			});
 	};
 
-	const handleUpdateUserProfile = (name, photoURL) => {
+	const handleUpdateUserProfile = (name, photoULR) => {
 		const profile = {
 			displayName: name,
-			photoURL: photoURL
+			photoULR: photoULR
 		};
 		updateUserProfile(profile)
 			.then(() => {})

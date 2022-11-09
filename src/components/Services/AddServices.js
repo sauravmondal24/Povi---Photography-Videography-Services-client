@@ -23,7 +23,7 @@ const AddServices = () => {
 			price,
 			description
 		};
-		console.log(addServices);
+		// console.log(addServices);
 
 		fetch('http://localhost:5000/addservices', {
 			method: 'POST',

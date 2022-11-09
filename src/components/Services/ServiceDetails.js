@@ -1,8 +1,11 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 
+import ServiceReview from './ServiceReview';
+
 const ServiceDetails = () => {
 	const { name, photoULR, description, price } = useLoaderData();
+
 	return (
 		<div className=" bg-dark py-5">
 			<div className="container">
@@ -26,9 +29,9 @@ const ServiceDetails = () => {
 
 				<div>
 					<nav>
-						<div class="nav nav-tabs " id="nav-tab" role="tablist">
+						<div className="nav nav-tabs " id="nav-tab" role="tablist">
 							<button
-								class="nav-link active fs-5 text-white bg-primary"
+								className="nav-link active fs-5 text-white bg-primary"
 								id="nav-home-tab"
 								data-bs-toggle="tab"
 								data-bs-target="#nav-home"
@@ -40,7 +43,7 @@ const ServiceDetails = () => {
 								Description
 							</button>
 							<button
-								class="nav-link fs-5 text-danger "
+								className="nav-link fs-5 text-danger "
 								id="nav-profile-tab"
 								data-bs-toggle="tab"
 								data-bs-target="#nav-profile"
@@ -52,7 +55,7 @@ const ServiceDetails = () => {
 								My Review
 							</button>
 							<button
-								class="nav-link fs-5 text-danger "
+								className="nav-link fs-5 text-danger "
 								id="nav-contact-tab"
 								data-bs-toggle="tab"
 								data-bs-target="#nav-contact"
@@ -65,9 +68,9 @@ const ServiceDetails = () => {
 							</button>
 						</div>
 					</nav>
-					<div class="tab-content" id="nav-tabContent">
+					<div className="tab-content" id="nav-tabContent">
 						<div
-							class="tab-pane fade show active text-white text-start py-4"
+							className="tab-pane fade show active text-white text-start py-4"
 							id="nav-home"
 							role="tabpanel"
 							aria-labelledby="nav-home-tab"
@@ -76,31 +79,22 @@ const ServiceDetails = () => {
 							{description}
 						</div>
 						<div
-							class="tab-pane fade"
+							className="tab-pane fade text-white text-start py-4"
 							id="nav-profile"
 							role="tabpanel"
 							aria-labelledby="nav-profile-tab"
 							tabindex="0"
 						>
-							...
+							<ServiceReview></ServiceReview>
 						</div>
 						<div
-							class="tab-pane fade"
+							className="tab-pane fade text-white text-start py-4"
 							id="nav-contact"
 							role="tabpanel"
 							aria-labelledby="nav-contact-tab"
 							tabindex="0"
 						>
-							...
-						</div>
-						<div
-							class="tab-pane fade"
-							id="nav-disabled"
-							role="tabpanel"
-							aria-labelledby="nav-disabled-tab"
-							tabindex="0"
-						>
-							...
+							{description}
 						</div>
 					</div>
 				</div>

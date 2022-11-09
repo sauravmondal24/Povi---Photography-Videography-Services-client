@@ -76,7 +76,7 @@ const Navbar = () => {
 								{user ? (
 									<>
 										<span>{user?.displayName}</span>
-										<button onClick={handleLogOut} className="btn btn-warning">
+										<button onClick={handleLogOut} className="btn btn-danger">
 											LogOut
 										</button>
 									</>
@@ -96,11 +96,11 @@ const Navbar = () => {
 
 							<div className="text-center px-2">
 								<Link>
-									{user?.photoURL ? (
+									{user?.photoULR ? (
 										<img
 											className="img-fluid circle"
 											style={{ height: '35px', borderRadius: '20px' }}
-											src={user?.photoURL}
+											src={user?.photoULR}
 											alt=""
 										/>
 									) : (
