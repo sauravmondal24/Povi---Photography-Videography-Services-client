@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import { FaUser } from 'react-icons/fa';
 
 const ServiceReview = () => {
 	const { user } = useContext(AuthContext);
@@ -8,7 +9,7 @@ const ServiceReview = () => {
 		event.preventDefault();
 		const form = event.target;
 		const name = form.name.value;
-		const email = user?.email || 'Unregister';
+		const email = form.email.value;
 		const photoURL = user?.photoURL || 'Unregister';
 		const comments = form.comments.value;
 
