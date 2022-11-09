@@ -1,7 +1,8 @@
 import React from 'react';
 
-const AllReviews = ({ review }) => {
-	const { name, email, photoURL, comments } = review;
+const AllReviews = ({ review, handleDelete }) => {
+	const { _id, name, email, photoURL, comments } = review;
+
 	return (
 		<tr>
 			<th scope="row">
@@ -12,7 +13,9 @@ const AllReviews = ({ review }) => {
 			<td>{comments}</td>
 			<td>
 				<button className="btn btn-info mx-2">UPDATE</button>
-				<button className="btn btn-danger">DELETE</button>
+				<button onClick={() => handleDelete(_id)} className="btn btn-danger">
+					DELETE
+				</button>
 			</td>
 		</tr>
 	);

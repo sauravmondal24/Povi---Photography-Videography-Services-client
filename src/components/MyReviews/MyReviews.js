@@ -13,6 +13,27 @@ const MyReviews = () => {
 			.then((data) => setReviews(data));
 	}, []);
 
+	const handleDelete = (id) => {
+		const proceed = window.confirm(
+			'Are you sure, you want to delete your Review'
+		);
+		if (proceed) {
+			fetch(`http://localhost:5000/reviews/${id}`, {
+				method: 'DELETE'
+			})
+				.then((res) => res.json())
+				.then((data) => {
+					console.log(data);
+					if (data.deletedCount > 0) {
+						alert('Deleted Successfully');
+						const remaining = reviews.filter((rev) => rev._id !== id);
+						setReviews(remaining);
+					}
+				})
+				.catch((error) => console.error(error));
+		}
+	};
+
 	return (
 		<div className="bg-dark py-5 ">
 			<div className="container text-white">
@@ -32,7 +53,11 @@ const MyReviews = () => {
 					</thead>
 					<tbody className="text-start">
 						{reviews.map((review) => (
-							<AllReviews key={review._id} review={review}></AllReviews>
+							<AllReviews
+								key={review._id}
+								review={review}
+								handleDelete={handleDelete}
+							></AllReviews>
 						))}
 					</tbody>
 				</table>
