@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import useTitle from '../../hooks/useTitle';
-import { useLoaderData } from 'react-router-dom';
 import AllReviews from './AllReviews';
 
 const MyReviews = () => {
@@ -41,26 +40,28 @@ const MyReviews = () => {
 					<h5 className="fs-1 text-uppercase">All REVIEWS</h5>
 					<hr />
 				</div>
-				<table className="table  table-bordered text-white">
-					<thead className="bg-success">
-						<tr>
-							<th scope="col">User</th>
-							<th scope="col">Name</th>
-							<th scope="col">Email</th>
-							<th scope="col">Comments</th>
-							<th scope="col">Action</th>
-						</tr>
-					</thead>
-					<tbody className="text-start">
-						{reviews.map((review) => (
-							<AllReviews
-								key={review._id}
-								review={review}
-								handleDelete={handleDelete}
-							></AllReviews>
-						))}
-					</tbody>
-				</table>
+				<div className="table-responsive">
+					<table className="table align-middle table-bordered text-white">
+						<thead className="bg-success">
+							<tr>
+								<th scope="col">User</th>
+								<th scope="col">Name</th>
+								<th scope="col">Email</th>
+								<th scope="col">Comments</th>
+								<th scope="col">Action</th>
+							</tr>
+						</thead>
+						<tbody className="text-start">
+							{reviews.map((review) => (
+								<AllReviews
+									key={review._id}
+									review={review}
+									handleDelete={handleDelete}
+								></AllReviews>
+							))}
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 	);

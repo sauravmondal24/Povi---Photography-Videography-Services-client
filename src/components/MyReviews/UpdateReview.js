@@ -42,45 +42,45 @@ const UpdateReview = () => {
 					<form onSubmit={handleUpdateComments}>
 						<h2 className="text-primary text-center">Update Your Comment</h2>
 						<hr />
-						<div class="mb-3">
-							<label for="exampleInputName" class="form-label">
+						<div className="mb-3">
+							<label htmlFor="exampleInputName" className="form-label">
 								Update Your Name
 							</label>
 							<input
 								onChange={handelUpdateReview}
 								name="name"
 								type="text"
-								class="form-control"
+								className="form-control"
 								id="exampleInputName"
 								aria-describedby="emailHelp"
 								placeholder="Enter Your Name"
 								defaultValue={oldReview.name}
 							/>
 						</div>
-						<div class="mb-3">
-							<label for="exampleInputEmail1" class="form-label">
+						<div className="mb-3">
+							<label htmlFor="exampleInputEmail1" className="form-label">
 								Update Email address
 							</label>
 							<input
 								onChange={handelUpdateReview}
 								name="email"
 								type="email"
-								class="form-control"
+								className="form-control"
 								id="exampleInputEmail1"
 								aria-describedby="emailHelp"
 								placeholder="Enter your Email"
 								defaultValue={oldReview.email}
 							/>
 						</div>
-						<div class="mb-3">
-							<label for="exampleInputPassword1" class="form-label">
+						<div className="mb-3">
+							<label htmlFor="exampleInputPassword1" className="form-label">
 								Update Your Comments
 							</label>
 							<textarea
 								onChange={handelUpdateReview}
 								name="comments"
 								type="text"
-								class="form-control"
+								className="form-control"
 								id="exampleInputPassword1"
 								placeholder="Write your comment here"
 								style={{ height: '100px' }}
@@ -88,7 +88,7 @@ const UpdateReview = () => {
 							/>
 						</div>
 
-						<button type="submit" class="btn btn-success btn-lg">
+						<button type="submit" className="btn btn-success btn-lg">
 							Update Review
 						</button>
 					</form>

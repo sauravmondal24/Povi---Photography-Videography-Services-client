@@ -12,7 +12,7 @@ const ServicesItem = ({ serviceItem }) => {
 					className="card  text-dark my-3 p-2 shadow"
 				>
 					<img
-						style={{ height: '250px' }}
+						style={{ height: '300px' }}
 						src={photoULR}
 						className="img-fluid card-img-top"
 						alt="..."

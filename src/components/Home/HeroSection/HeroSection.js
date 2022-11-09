@@ -42,10 +42,10 @@ const HeroSection = () => {
 									nulla molestie, lorem ut facilisis dignissim, ante tortor
 									posuere urna nec sollicitudin mi eros.”
 								</p>
-								<p className="card-text">
+								<div className="card-text">
 									<h4>Beckeet Dariel</h4>
 									<small className="text-muted">Editor & Videographer</small>
-								</p>
+								</div>
 							</div>
 						</div>
 					</div>

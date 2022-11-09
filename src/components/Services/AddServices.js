@@ -50,7 +50,7 @@ const AddServices = () => {
 					<div className="card text-start p-4 fw-bold">
 						<h2 className="text-center fw-bold py-3 fs-1">Add Services</h2>
 						<div className="mb-3">
-							<label htmlFor="exampleInputName" className="form-label">
+							<label htmlhtmlFor="exampleInputName" className="form-label">
 								Enter your Services name
 							</label>
 							<input
@@ -63,7 +63,7 @@ const AddServices = () => {
 							/>
 						</div>
 						<div className="mb-3">
-							<label htmlFor="exampleInputPhoto" className="form-label">
+							<label htmlhtmlFor="exampleInputPhoto" className="form-label">
 								Services Photo URL
 							</label>
 							<input
@@ -76,7 +76,7 @@ const AddServices = () => {
 							/>
 						</div>
 						<div className="mb-3">
-							<label htmlFor="exampleInputPrice" className="form-label">
+							<label htmlhtmlFor="exampleInputPrice" className="form-label">
 								Services Price
 							</label>
 							<input
@@ -89,7 +89,10 @@ const AddServices = () => {
 							/>
 						</div>
 						<div className="mb-3">
-							<label htmlFor="exampleInputDescription" className="form-label">
+							<label
+								htmlhtmlFor="exampleInputDescription"
+								className="form-label"
+							>
 								Services Description
 							</label>
 							<textarea

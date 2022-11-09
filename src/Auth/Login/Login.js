@@ -57,7 +57,7 @@ const Login = () => {
 					<div className="card text-start p-4 fw-bold">
 						<h2 className="text-center fw-bold py-3 fs-1">Login Now!</h2>
 						<div className="mb-3">
-							<label for="exampleInputEmail1" className="form-label">
+							<label htmlFor="exampleInputEmail1" className="form-label">
 								Email address
 							</label>
 							<input
@@ -70,7 +70,7 @@ const Login = () => {
 							/>
 						</div>
 						<div className="mb-3">
-							<label for="exampleInputPassword1" className="form-label">
+							<label htmlFor="exampleInputPassword1" className="form-label">
 								Password
 							</label>
 							<input
@@ -87,7 +87,7 @@ const Login = () => {
 								className="form-check-input"
 								id="exampleCheck1"
 							/>
-							<label className="form-check-label" for="exampleCheck1">
+							<label className="form-check-label" htmlFor="exampleCheck1">
 								Check me out
 							</label>
 						</div>

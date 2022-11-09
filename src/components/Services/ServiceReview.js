@@ -1,8 +1,9 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 
 const ServiceReview = () => {
 	const { user } = useContext(AuthContext);
+	const [reviews, setReviews] = useState([]);
 
 	const handleComments = (event) => {
 		event.preventDefault();
@@ -37,55 +38,63 @@ const ServiceReview = () => {
 			.catch((error) => console.error(error));
 	};
 
+	useEffect(() => {
+		fetch('http://localhost:5000/reviews')
+			.then((res) => res.json())
+			.then((data) => setReviews(data));
+	}, []);
+
 	return (
 		<div>
 			<div className="row">
-				<div className="col-md-6"></div>
+				<div className="col-md-6">
+					<h2>Name: {reviews.length}</h2>
+				</div>
 				<div className="col-md-6 card bg-dark p-4 border border-white">
 					<form onSubmit={handleComments}>
 						<h2 className="text-primary">Write Your Comment</h2>
 						<hr />
-						<div class="mb-3">
-							<label for="exampleInputName" class="form-label">
+						<div className="mb-3">
+							<label htmlFor="exampleInputName" className="form-label">
 								Your Name
 							</label>
 							<input
 								name="name"
 								type="text"
-								class="form-control"
+								className="form-control"
 								id="exampleInputName"
 								aria-describedby="emailHelp"
 								placeholder="Enter Your Name"
 							/>
 						</div>
-						<div class="mb-3">
-							<label for="exampleInputEmail1" class="form-label">
+						<div className="mb-3">
+							<label htmlFor="exampleInputEmail1" className="form-label">
 								Email address
 							</label>
 							<input
 								name="email"
 								type="email"
-								class="form-control"
+								className="form-control"
 								id="exampleInputEmail1"
 								aria-describedby="emailHelp"
 								placeholder="Enter your Email"
 							/>
 						</div>
-						<div class="mb-3">
-							<label for="exampleInputPassword1" class="form-label">
+						<div className="mb-3">
+							<label htmlFor="exampleInputPassword1" className="form-label">
 								Your Comments
 							</label>
 							<textarea
 								name="comments"
 								type="text"
-								class="form-control"
+								className="form-control"
 								id="exampleInputPassword1"
 								placeholder="Write your comment here"
 								style={{ height: '100px' }}
 							/>
 						</div>
 
-						<button type="submit" class="btn btn-success btn-lg">
+						<button type="submit" className="btn btn-success btn-lg">
 							Submit Review
 						</button>
 					</form>

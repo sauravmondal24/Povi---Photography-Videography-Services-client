@@ -11,12 +11,15 @@ const AllReviews = ({ review, handleDelete }) => {
 			<td>{name}</td>
 			<td>{email}</td>
 			<td>{comments}</td>
-			<td>
+			<td style={{ width: '180px' }}>
 				<Link to={`/updateReview/${_id}`}>
-					<button className="btn btn-info mx-2">UPDATE</button>
+					<button className="btn btn-sm btn-info mx-2">UPDATE</button>
 				</Link>
 
-				<button onClick={() => handleDelete(_id)} className="btn btn-danger">
+				<button
+					onClick={() => handleDelete(_id)}
+					className="btn btn-danger btn-sm"
+				>
 					DELETE
 				</button>
 			</td>

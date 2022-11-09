@@ -4,6 +4,7 @@ import Banner from '../Header/Banner/Banner';
 import HeroSection from './HeroSection/HeroSection';
 import ServicesItem from './HeroSection/ServicesItem/ServicesItem';
 import { Link } from 'react-router-dom';
+import Packages from './Packages/Packages';
 
 const Home = () => {
 	useTitle('Home');
@@ -41,6 +42,7 @@ const Home = () => {
 					</Link>
 				</div>
 			</div>
+			<Packages></Packages>
 		</div>
 	);
 };
