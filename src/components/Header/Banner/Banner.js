@@ -1,5 +1,6 @@
 import React from 'react';
 import './Banner.css';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
 	const backImage = {
@@ -25,7 +26,11 @@ const Banner = () => {
 							the reale he point of using Lorem Ipsum is that it has a
 							more-or-less normal valid.
 						</p>
-						<button className="btn btn-lg btn-danger ">All Services</button>
+						<button className="btn btn-lg btn-danger ">
+							<Link className="text-decoration-none text-light" to="/services">
+								All Services
+							</Link>
+						</button>
 					</div>
 				</div>
 			</div>

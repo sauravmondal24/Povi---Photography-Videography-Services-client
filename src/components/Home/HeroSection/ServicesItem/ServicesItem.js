@@ -8,11 +8,11 @@ const ServicesItem = ({ serviceItem }) => {
 		<div>
 			<div>
 				<div
-					style={{ height: '400px', backgroundColor: '#ededed' }}
-					className="card  text-dark my-3 p-2 shadow"
+					style={{ height: '500px', backgroundColor: '#ededed' }}
+					className="card  text-dark my-3 p-3 shadow-lg m-2 "
 				>
 					<img
-						style={{ height: '300px' }}
+						style={{ height: '400px', width: '100%' }}
 						src={photoULR}
 						className="img-fluid card-img-top"
 						alt="..."
@@ -20,8 +20,8 @@ const ServicesItem = ({ serviceItem }) => {
 					<div className="card-body">
 						<h5 className="card-title text-dark">{name}</h5>
 
-						<Link to={`/services/${_id}`} className="btn btn-primary">
-							ALL SERVICES
+						<Link to={`/services/${_id}`} className="btn btn-danger my-3">
+							VIEW DETAILS
 						</Link>
 					</div>
 				</div>

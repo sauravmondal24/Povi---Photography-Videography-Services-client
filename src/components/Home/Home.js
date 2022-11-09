@@ -6,6 +6,7 @@ import ServicesItem from './HeroSection/ServicesItem/ServicesItem';
 import { Link } from 'react-router-dom';
 import Packages from './Packages/Packages';
 import Contact from './Contact/Contact';
+import Gallery from './Gallery/Gallery';
 
 const Home = () => {
 	useTitle('Home');
@@ -38,7 +39,7 @@ const Home = () => {
 						))}
 					</div>
 
-					<Link to="/services" className="btn btn-primary btn-lg my-5">
+					<Link to="/services" className="btn btn-danger btn-lg my-5">
 						SHOW ALL SERVICES
 					</Link>
 				</div>

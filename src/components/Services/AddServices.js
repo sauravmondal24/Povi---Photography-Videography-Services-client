@@ -105,7 +105,7 @@ const AddServices = () => {
 							/>
 						</div>
 
-						<button type="submit" className="btn btn-lg btn-primary my-4">
+						<button type="submit" className="btn btn-lg btn-danger my-4">
 							SUBMIT
 						</button>
 					</div>

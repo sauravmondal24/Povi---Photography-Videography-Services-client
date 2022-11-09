@@ -94,7 +94,7 @@ const ServiceReview = () => {
 							/>
 						</div>
 
-						<button type="submit" className="btn btn-success btn-lg">
+						<button type="submit" className="btn btn-danger w-100 btn-lg">
 							Submit Review
 						</button>
 					</form>
