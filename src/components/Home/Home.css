@@ -3,3 +3,17 @@
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 20px;
 }
+.packageText {
+	width: 50%;
+}
+
+@media only screen and (max-width: 688px) {
+	.servicesSample {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 20px;
+	}
+	.packageText {
+		width: 100% !important;
+	}
+}

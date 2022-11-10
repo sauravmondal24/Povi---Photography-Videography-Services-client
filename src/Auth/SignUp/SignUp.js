@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
+import '../Auth.css';
 
 const SignUp = () => {
 	useTitle('SignUp');
@@ -44,7 +45,7 @@ const SignUp = () => {
 
 	return (
 		<div style={{ backgroundColor: '#242E37' }} className="">
-			<div className="w-25 m-auto py-5 ">
+			<div className=" m-auto py-5 signUpForm">
 				<form onSubmit={handleSignUp}>
 					<div className="card text-start p-4 fw-bold">
 						<h2 className="text-center fw-bold py-3 fs-1">SignUp Now!</h2>

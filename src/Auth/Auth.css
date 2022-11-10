@@ -1,0 +1,15 @@
+.loginForm {
+	width: 25%;
+}
+.signUpForm {
+	width: 25%;
+}
+
+@media only screen and (max-width: 688px) {
+	.loginForm {
+		width: 100%;
+	}
+	.signUpForm {
+		width: 100%;
+	}
+}

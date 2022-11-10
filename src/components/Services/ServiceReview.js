@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import SingleServiceReview from './SingleServiceReview';
+import { Link } from 'react-router-dom';
 
 const ServiceReview = () => {
 	const { user } = useContext(AuthContext);
@@ -46,60 +48,74 @@ const ServiceReview = () => {
 
 	return (
 		<div>
-			<div className="row">
-				<div className="col-md-6">
-					<h2>Name: {reviews.length}</h2>
-				</div>
-				<div className="col-md-6 card bg-dark p-4 border border-white">
-					<form onSubmit={handleComments}>
-						<h2 className="text-primary">Write Your Comment</h2>
-						<hr />
-						<div className="mb-3">
-							<label htmlFor="exampleInputName" className="form-label">
-								Your Name
-							</label>
-							<input
-								name="name"
-								type="text"
-								className="form-control"
-								id="exampleInputName"
-								aria-describedby="emailHelp"
-								placeholder="Enter Your Name"
-							/>
-						</div>
-						<div className="mb-3">
-							<label htmlFor="exampleInputEmail1" className="form-label">
-								Email address
-							</label>
-							<input
-								name="email"
-								type="email"
-								className="form-control"
-								id="exampleInputEmail1"
-								aria-describedby="emailHelp"
-								placeholder="Enter your Email"
-							/>
-						</div>
-						<div className="mb-3">
-							<label htmlFor="exampleInputPassword1" className="form-label">
-								Your Comments
-							</label>
-							<textarea
-								name="comments"
-								type="text"
-								className="form-control"
-								id="exampleInputPassword1"
-								placeholder="Write your comment here"
-								style={{ height: '100px' }}
-							/>
-						</div>
+			{user ? (
+				<div className="row">
+					<div className="col-md-6 border rounded p-4">
+						<h2 className="text-primary">Service Review</h2>
+						{reviews.map((review) => (
+							<SingleServiceReview
+								key={review._id}
+								review={review}
+							></SingleServiceReview>
+						))}
+					</div>
+					<div className="col-md-6 card bg-dark p-4 border border-white">
+						<form onSubmit={handleComments}>
+							<h2 className="text-primary">Write Your Comment</h2>
+							<hr />
+							<div className="mb-3">
+								<label htmlFor="exampleInputName" className="form-label">
+									Your Name
+								</label>
+								<input
+									name="name"
+									type="text"
+									className="form-control"
+									id="exampleInputName"
+									aria-describedby="emailHelp"
+									placeholder="Enter Your Name"
+								/>
+							</div>
+							<div className="mb-3">
+								<label htmlFor="exampleInputEmail1" className="form-label">
+									Email address
+								</label>
+								<input
+									name="email"
+									type="email"
+									className="form-control"
+									id="exampleInputEmail1"
+									aria-describedby="emailHelp"
+									placeholder="Enter your Email"
+								/>
+							</div>
+							<div className="mb-3">
+								<label htmlFor="exampleInputPassword1" className="form-label">
+									Your Comments
+								</label>
+								<textarea
+									name="comments"
+									type="text"
+									className="form-control"
+									id="exampleInputPassword1"
+									placeholder="Write your comment here"
+									style={{ height: '100px' }}
+								/>
+							</div>
 
-						<button type="submit" className="btn btn-danger w-100 btn-lg">
-							Submit Review
-						</button>
-					</form>
+							<button type="submit" className="btn btn-danger w-100 btn-lg">
+								Submit Review
+							</button>
+						</form>
+					</div>
 				</div>
-			</div>
+			) : (
+				<>
+					<h2 className="text-center">
+						Please login to add a review <Link to="/login">Click Here</Link>
+					</h2>
+				</>
+			)}
 		</div>
 	);
 };

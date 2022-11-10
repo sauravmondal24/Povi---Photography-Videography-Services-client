@@ -108,20 +108,6 @@ const Navbar = () => {
 									)}
 								</Link>
 							</div>
-							{/* <button className="btn btn-outline-success" type="submit">
-								<Link to="/login" className="nav-link text-white " href="#">
-									Login
-								</Link>
-							</button>
-							<button className="btn btn-outline-success" type="submit">
-								<Link
-									onClick={handleLogOut}
-									className="nav-link text-white "
-									href="#"
-								>
-									Logout
-								</Link>
-							</button> */}
 						</div>
 					</div>
 				</div>

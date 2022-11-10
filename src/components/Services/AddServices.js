@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
+import './Services.css';
 
 // import { Link } from 'react-router-dom';
 
@@ -45,12 +46,12 @@ const AddServices = () => {
 	};
 	return (
 		<div className="bg-dark">
-			<div className="w-50 m-auto py-5 ">
+			<div className="m-auto py-5  addServices">
 				<form onSubmit={servicesHandle}>
 					<div className="card text-start p-4 fw-bold fs-5">
 						<h2 className="text-center fw-bold py-3 fs-1">Add Services</h2>
 						<div className="mb-3">
-							<label htmlhtmlFor="exampleInputName" className="form-label">
+							<label htmlFor="exampleInputName" className="form-label">
 								Enter your Services name
 							</label>
 							<input
@@ -63,7 +64,7 @@ const AddServices = () => {
 							/>
 						</div>
 						<div className="mb-3">
-							<label htmlhtmlFor="exampleInputPhoto" className="form-label">
+							<label htmlFor="exampleInputPhoto" className="form-label">
 								Services Photo URL
 							</label>
 							<input
@@ -76,7 +77,7 @@ const AddServices = () => {
 							/>
 						</div>
 						<div className="mb-3">
-							<label htmlhtmlFor="exampleInputPrice" className="form-label">
+							<label htmlFor="exampleInputPrice" className="form-label">
 								Services Price
 							</label>
 							<input
@@ -89,10 +90,7 @@ const AddServices = () => {
 							/>
 						</div>
 						<div className="mb-3">
-							<label
-								htmlhtmlFor="exampleInputDescription"
-								className="form-label"
-							>
+							<label htmlFor="exampleInputDescription" className="form-label">
 								Services Description
 							</label>
 							<textarea

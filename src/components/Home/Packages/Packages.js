@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaBeer, FaArrowRight, FaCheck } from 'react-icons/fa';
+import { FaCheck } from 'react-icons/fa';
+import '../Home.css';
 
 const Packages = () => {
 	return (
@@ -8,7 +9,7 @@ const Packages = () => {
 				<h2 className="text-center text-uppercase pb-3 fs-1 fw-bold">
 					Choose Your Packages
 				</h2>
-				<p className="text-center w-50 m-auto ">
+				<p className="text-center packageText m-auto ">
 					Packages ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
 					minus perferendis repellat facilis numquam rem iure quaerat pariatur.
 				</p>

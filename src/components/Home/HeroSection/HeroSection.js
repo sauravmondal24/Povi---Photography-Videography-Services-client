@@ -1,4 +1,5 @@
 import React from 'react';
+import './HeroSection.css';
 
 const HeroSection = () => {
 	return (
@@ -29,7 +30,7 @@ const HeroSection = () => {
 							</div>
 						</div>
 						<div className="col-md-6">
-							<div className="card-body text-start text-white ps-5 pt-5">
+							<div className="card-body text-start text-white ps-5 pt-5 heroText">
 								<h5 className="card-title">ABOUT US</h5>
 								<h2 className="card-title fs-1">
 									We Are The Leading Video Studio In The Country

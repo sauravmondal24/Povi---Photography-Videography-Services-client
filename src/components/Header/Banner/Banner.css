@@ -1,20 +1,20 @@
-/* .backImage {
-	background-image: linear-gradient(
-			45deg,
-			rgba(245, 70, 66, 0.75),
-			rgba(8, 83, 156, 0.75)
-		),
-		url('https://templates.hibootstrap.com/povi/default/assets/img/hero/hero-bg-2.jpg');
-	width: 100%;
-	height: 100vh;
-	text-align: center;
-	color: #fff;
-} */
-
-/* .bannerImage {
-	linear-gradient:(to right, rgba(0,0,0,.30), rgba(255,0,0,0))'
-} */
-
 .bannerTitle {
 	padding-top: 20vh;
+}
+.headerText {
+	width: 50%;
+}
+
+@media only screen and (max-width: 688px) {
+	.headerTitle {
+		font-size: 50px !important;
+		text-align: center;
+	}
+	.headerText {
+		width: 100% !important;
+		text-align: center;
+	}
+	.bannerBTN {
+		text-align: center !important;
+	}
 }

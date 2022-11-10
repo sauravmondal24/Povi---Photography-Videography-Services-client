@@ -3,3 +3,18 @@
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 1px;
 }
+
+.addServices {
+	width: 50%;
+}
+
+@media only screen and (max-width: 688px) {
+	.servicesItem {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 1px;
+	}
+	.addServices {
+		width: 100%;
+	}
+}

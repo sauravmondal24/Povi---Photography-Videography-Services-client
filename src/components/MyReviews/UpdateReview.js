@@ -1,9 +1,11 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import { useLoaderData } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const UpdateReview = () => {
 	const { user } = useContext(AuthContext);
+	const navigate = useNavigate();
 
 	const oldReview = useLoaderData();
 
@@ -25,6 +27,7 @@ const UpdateReview = () => {
 				if (data.modifiedCount > 0) {
 					alert('Review Updated Complete');
 				}
+				navigate('/myreviews');
 			})
 			.catch((error) => console.error(error));
 	};

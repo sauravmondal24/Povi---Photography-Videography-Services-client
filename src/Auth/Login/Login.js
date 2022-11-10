@@ -6,6 +6,7 @@ import { FaGoogle, FaGithub } from 'react-icons/fa';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import useTitle from '../../hooks/useTitle';
+import '../Auth.css';
 
 const Login = () => {
 	useTitle('Login');
@@ -52,7 +53,7 @@ const Login = () => {
 	};
 	return (
 		<div style={{ backgroundColor: '#242E37' }} className="">
-			<div className="w-25 m-auto py-5 ">
+			<div className=" m-auto py-5 loginForm">
 				<form onSubmit={handleLogin}>
 					<div className="card text-start p-4 fw-bold">
 						<h2 className="text-center fw-bold py-3 fs-1">Login Now!</h2>

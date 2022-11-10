@@ -41,7 +41,7 @@ const ServiceDetails = () => {
 								aria-controls="nav-home"
 								aria-selected="true"
 							>
-								Description
+								My Review
 							</button>
 							<button
 								className="nav-link fs-5 text-danger "
@@ -53,7 +53,7 @@ const ServiceDetails = () => {
 								aria-controls="nav-profile"
 								aria-selected="false"
 							>
-								My Review
+								Description
 							</button>
 							<button
 								className="nav-link fs-5 text-danger "
@@ -75,25 +75,25 @@ const ServiceDetails = () => {
 							id="nav-home"
 							role="tabpanel"
 							aria-labelledby="nav-home-tab"
-							tabindex="0"
+							// tabindex="0"
 						>
-							{description}
+							<ServiceReview></ServiceReview>
 						</div>
 						<div
 							className="tab-pane fade text-white text-start py-4"
 							id="nav-profile"
 							role="tabpanel"
 							aria-labelledby="nav-profile-tab"
-							tabindex="0"
+							// tabindex="0"
 						>
-							<ServiceReview></ServiceReview>
+							{description}
 						</div>
 						<div
 							className="tab-pane fade text-white text-start py-4"
 							id="nav-contact"
 							role="tabpanel"
 							aria-labelledby="nav-contact-tab"
-							tabindex="0"
+							// tabindex="0"
 						>
 							{description}
 						</div>

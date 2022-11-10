@@ -78,8 +78,8 @@ const Footer = () => {
 					<div className="col-md-3">
 						<h3>Follow Instagram</h3>
 						<div>
-							<div className="row m-2">
-								<div className="col-lg-6">
+							<div className="row g-3">
+								<div className="col-sm-6">
 									<img
 										className="img-fluid "
 										src={
@@ -88,7 +88,7 @@ const Footer = () => {
 										alt=""
 									/>
 								</div>
-								<div className="col-lg-6">
+								<div className="col-sm-6">
 									<img
 										className="img-fluid "
 										src={
@@ -97,9 +97,7 @@ const Footer = () => {
 										alt=""
 									/>
 								</div>
-							</div>
-							<div className="row m-2">
-								<div className="col-lg-6">
+								<div className="col-sm-6">
 									<img
 										className="img-fluid "
 										src={
@@ -108,7 +106,7 @@ const Footer = () => {
 										alt=""
 									/>
 								</div>
-								<div className="col-lg-6">
+								<div className="col-sm-6">
 									<img
 										className="img-fluid "
 										src={

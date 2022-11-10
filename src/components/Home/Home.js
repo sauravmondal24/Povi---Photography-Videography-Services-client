@@ -6,7 +6,6 @@ import ServicesItem from './HeroSection/ServicesItem/ServicesItem';
 import { Link } from 'react-router-dom';
 import Packages from './Packages/Packages';
 import Contact from './Contact/Contact';
-import Gallery from './Gallery/Gallery';
 
 const Home = () => {
 	useTitle('Home');
