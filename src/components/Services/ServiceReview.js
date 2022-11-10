@@ -22,7 +22,7 @@ const ServiceReview = () => {
 			comments
 		};
 
-		fetch('http://localhost:5000/addreviews', {
+		fetch('https://povi-server.vercel.app/addreviews', {
 			method: 'POST',
 			headers: {
 				'content-type': 'application/json'
@@ -41,7 +41,7 @@ const ServiceReview = () => {
 	};
 
 	useEffect(() => {
-		fetch('http://localhost:5000/reviews')
+		fetch('https://povi-server.vercel.app/reviews')
 			.then((res) => res.json())
 			.then((data) => setReviews(data));
 	}, []);

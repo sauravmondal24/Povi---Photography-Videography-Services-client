@@ -12,7 +12,7 @@ const Home = () => {
 
 	const [samples, SetSamples] = useState([]);
 	useEffect(() => {
-		fetch('http://localhost:5000/sampleServices')
+		fetch('https://povi-server.vercel.app/sampleServices')
 			.then((res) => res.json())
 			.then((data) => SetSamples(data))
 			.catch((error) => console.error(error));

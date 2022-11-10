@@ -15,7 +15,7 @@ const UpdateReview = () => {
 		event.preventDefault();
 		console.log(review);
 
-		fetch(`http://localhost:5000/reviews/${oldReview._id}`, {
+		fetch(`https://povi-server.vercel.app/reviews/${oldReview._id}`, {
 			method: 'PUT',
 			headers: {
 				'content-type': 'application/json'

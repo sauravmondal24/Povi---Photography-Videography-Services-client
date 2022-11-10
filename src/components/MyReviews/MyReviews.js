@@ -7,7 +7,7 @@ const MyReviews = () => {
 	const [reviews, setReviews] = useState([]);
 
 	useEffect(() => {
-		fetch('http://localhost:5000/reviews')
+		fetch('https://povi-server.vercel.app/reviews')
 			.then((res) => res.json())
 			.then((data) => setReviews(data));
 	}, []);
@@ -17,7 +17,7 @@ const MyReviews = () => {
 			'Are you sure, you want to delete your Review'
 		);
 		if (proceed) {
-			fetch(`http://localhost:5000/reviews/${id}`, {
+			fetch(`https://povi-server.vercel.app/reviews/${id}`, {
 				method: 'DELETE'
 			})
 				.then((res) => res.json())

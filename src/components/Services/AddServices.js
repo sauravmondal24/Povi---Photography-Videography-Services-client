@@ -26,7 +26,7 @@ const AddServices = () => {
 		};
 		// console.log(addServices);
 
-		fetch('http://localhost:5000/addservices', {
+		fetch('https://povi-server.vercel.app/addservices', {
 			method: 'POST',
 			headers: {
 				'content-type': 'application/json'

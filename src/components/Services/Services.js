@@ -9,10 +9,12 @@ const Services = () => {
 	const [services, setServices] = useState([]);
 
 	useEffect(() => {
-		fetch('http://localhost:5000/services')
+		fetch('https://povi-server.vercel.app/services')
 			.then((res) => res.json())
 			.then((data) => setServices(data));
 	}, []);
+
+	console.log('Error solve trying', services);
 
 	return (
 		<div className="bg-dark text-white py-5">

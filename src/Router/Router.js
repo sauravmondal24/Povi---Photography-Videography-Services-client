@@ -58,13 +58,13 @@ export const routers = createBrowserRouter([
 				path: '/services/:id',
 				element: <ServiceDetails></ServiceDetails>,
 				loader: ({ params }) =>
-					fetch(`http://localhost:5000/services/${params.id}`)
+					fetch(`https://povi-server.vercel.app/services/${params.id}`)
 			},
 			{
 				path: '/updateReview/:id',
 				element: <UpdateReview></UpdateReview>,
 				loader: ({ params }) =>
-					fetch(`http://localhost:5000/reviews/${params.id}`)
+					fetch(`https://povi-server.vercel.app/reviews/${params.id}`)
 			}
 		]
 	},
