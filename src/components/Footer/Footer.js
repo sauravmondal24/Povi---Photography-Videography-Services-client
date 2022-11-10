@@ -149,7 +149,6 @@ const Footer = () => {
 							<div className="d-flex align-items-center">
 								<FaLocationArrow className="fs-2"></FaLocationArrow>
 								<p className="mx-3">
-									{' '}
 									5961 De Santa Ave, Mirpur 01, DH 1200, BD
 								</p>
 							</div>
@@ -158,7 +157,7 @@ const Footer = () => {
 								<FaPhone className="fs-4"></FaPhone>
 								<div className="mx-3">
 									<p> +880 01700223344</p>
-									<p> +880 01700223344</p>
+									<p> +880 01700443344</p>
 								</div>
 							</div>
 							<div className="d-flex align-items-center">
@@ -168,8 +167,9 @@ const Footer = () => {
 						</div>
 					</div>
 					<hr />
-					<p className="py-4 text-center">
-						@ Povi. All Rights Reserved By Sauravms IT Group
+					<p className="py-3 text-center">
+						@ Povi. All Rights Reserved By{' '}
+						<Link to={'https://sauravms.netlify.app/'}>Sauravms IT Group</Link>
 					</p>
 				</div>
 			</div>

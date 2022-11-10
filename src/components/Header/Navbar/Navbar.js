@@ -96,11 +96,11 @@ const Navbar = () => {
 
 							<div className="text-center px-2">
 								<Link>
-									{user?.photoULR ? (
+									{user?.photoURL ? (
 										<img
 											className="img-fluid circle"
 											style={{ height: '35px', borderRadius: '20px' }}
-											src={user?.photoULR}
+											src={user?.photoURL}
 											alt=""
 										/>
 									) : (

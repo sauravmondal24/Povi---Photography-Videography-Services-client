@@ -75,7 +75,6 @@ const ServiceDetails = () => {
 							id="nav-home"
 							role="tabpanel"
 							aria-labelledby="nav-home-tab"
-							// tabindex="0"
 						>
 							<ServiceReview></ServiceReview>
 						</div>
@@ -84,7 +83,6 @@ const ServiceDetails = () => {
 							id="nav-profile"
 							role="tabpanel"
 							aria-labelledby="nav-profile-tab"
-							// tabindex="0"
 						>
 							{description}
 						</div>
@@ -93,7 +91,6 @@ const ServiceDetails = () => {
 							id="nav-contact"
 							role="tabpanel"
 							aria-labelledby="nav-contact-tab"
-							// tabindex="0"
 						>
 							{description}
 						</div>

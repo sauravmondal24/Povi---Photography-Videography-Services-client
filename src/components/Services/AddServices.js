@@ -3,8 +3,6 @@ import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
 import './Services.css';
 
-// import { Link } from 'react-router-dom';
-
 const AddServices = () => {
 	useTitle('Add Services');
 	const { user } = useContext(AuthContext);
@@ -24,7 +22,6 @@ const AddServices = () => {
 			price,
 			description
 		};
-		// console.log(addServices);
 
 		fetch('https://povi-server.vercel.app/addservices', {
 			method: 'POST',
@@ -40,7 +37,7 @@ const AddServices = () => {
 
 					form.reset();
 				}
-				console.log(data);
+				// console.log(data);
 			})
 			.catch((error) => console.error(error));
 	};

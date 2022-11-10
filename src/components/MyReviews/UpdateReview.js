@@ -1,10 +1,8 @@
-import React, { useContext, useState } from 'react';
-import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 const UpdateReview = () => {
-	const { user } = useContext(AuthContext);
 	const navigate = useNavigate();
 
 	const oldReview = useLoaderData();
@@ -13,7 +11,7 @@ const UpdateReview = () => {
 
 	const handleUpdateComments = (event) => {
 		event.preventDefault();
-		console.log(review);
+		// console.log(review);
 
 		fetch(`https://povi-server.vercel.app/reviews/${oldReview._id}`, {
 			method: 'PUT',

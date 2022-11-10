@@ -17,7 +17,7 @@ const Banner = () => {
 			<div style={backImage} className="bannerImage">
 				<div className="text-start container">
 					<div className="bannerTitle">
-						<h3 className="fs-5 fw-bold">Professional Videographer Service</h3>
+						<h3 className="fs-5 fw-bold">Professional Videography Service</h3>
 						<h1 className="fw-bolder headerTitle" style={{ fontSize: '60px' }}>
 							Capture The Best <br /> Experience
 						</h1>

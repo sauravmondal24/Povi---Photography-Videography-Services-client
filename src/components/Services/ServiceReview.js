@@ -35,7 +35,6 @@ const ServiceReview = () => {
 					alert('New Review Added');
 					form.reset();
 				}
-				console.log(data);
 			})
 			.catch((error) => console.error(error));
 	};

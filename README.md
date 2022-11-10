@@ -1,6 +1,6 @@
 # Povi- Photography & Videography Services
 
-Live website Link:[https://povi-user-auth.web.app/](https://povi-user-auth.web.app/).
+Live website Link: [https://povi-user-auth.web.app/](https://povi-user-auth.web.app/).
 
 ## Povi- Photography & Videography Services, GitHub link
 
@@ -26,3 +26,13 @@ Server: [https://povi-server.vercel.app/](https://povi-server.vercel.app/)
 - Environment Variables
 - Bootstrap CSS
 - React-photo-view
+
+### Website Features
+
+- Sign in With Google and GitHub
+- Services Add
+- Reviews Add, Update, Delete
+- Contact Form add
+- Dynamic Page Title
+- Blog Section
+- Package section

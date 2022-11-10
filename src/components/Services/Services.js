@@ -14,8 +14,6 @@ const Services = () => {
 			.then((data) => setServices(data));
 	}, []);
 
-	console.log('Error solve trying', services);
-
 	return (
 		<div className="bg-dark text-white py-5">
 			<div className="container">

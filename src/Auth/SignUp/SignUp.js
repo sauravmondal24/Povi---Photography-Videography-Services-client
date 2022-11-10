@@ -110,7 +110,7 @@ const SignUp = () => {
 						</div>
 
 						<button type="submit" className="btn btn-primary">
-							SINGNUP
+							SIGNUP
 						</button>
 					</div>
 				</form>
