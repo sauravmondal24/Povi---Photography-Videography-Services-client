@@ -11,7 +11,7 @@ const UpdateReview = () => {
 
 	const handleUpdateComments = (event) => {
 		event.preventDefault();
-		// console.log(review);
+		
 
 		fetch(`https://povi-server.vercel.app/reviews/${oldReview._id}`, {
 			method: 'PUT',

@@ -37,7 +37,7 @@ const AddServices = () => {
 
 					form.reset();
 				}
-				// console.log(data);
+				
 			})
 			.catch((error) => console.error(error));
 	};

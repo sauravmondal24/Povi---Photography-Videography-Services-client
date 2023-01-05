@@ -21,7 +21,7 @@ const SignUp = () => {
 		createUser(email, password)
 			.then((res) => {
 				const user = res.user;
-				console.log(user);
+				
 				form.reset();
 				setError('');
 				handleUpdateUserProfile(name, photoULR);

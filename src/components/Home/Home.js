@@ -6,6 +6,7 @@ import ServicesItem from './HeroSection/ServicesItem/ServicesItem';
 import { Link } from 'react-router-dom';
 import Packages from './Packages/Packages';
 import Contact from './Contact/Contact';
+import AmazingVideo from './AmazingVideo/AmazingVideo';
 
 const Home = () => {
 	useTitle('Home');
@@ -43,6 +44,7 @@ const Home = () => {
 					</Link>
 				</div>
 			</div>
+			<AmazingVideo></AmazingVideo>
 			<Packages></Packages>
 			<Contact></Contact>
 		</div>

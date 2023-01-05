@@ -22,7 +22,7 @@ const MyReviews = () => {
 			})
 				.then((res) => res.json())
 				.then((data) => {
-					// console.log(data);
+					
 					if (data.deletedCount > 0) {
 						alert('Deleted Successfully');
 						const remaining = reviews.filter((rev) => rev._id !== id);
