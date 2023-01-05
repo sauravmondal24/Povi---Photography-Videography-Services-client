@@ -14,7 +14,7 @@ const AmazingVideo = () => {
 
 				<div className="py-5">
 					<div className="row">
-						<div className="col-md-3">
+						<div className="col-md-6 col-lg-3 p-2">
 							<div className="card bg-dark py-4 shadow-lg">
 								<div className="card-body">
 									<FaBuilding className="fs-1 text-danger mb-3"></FaBuilding>
@@ -26,7 +26,7 @@ const AmazingVideo = () => {
 								</div>
 							</div>
 						</div>
-						<div className="col-md-3">
+						<div className="col-md-6 col-lg-3 p-2">
 							<div className="card bg-dark py-4 shadow-lg">
 								<div className="card-body">
 									<FaRing className="fs-1 text-danger mb-3"></FaRing>
@@ -38,7 +38,7 @@ const AmazingVideo = () => {
 								</div>
 							</div>
 						</div>
-						<div className="col-md-3">
+						<div className="col-md-6 col-lg-3 p-2">
 							<div className="card bg-dark py-4 shadow-lg">
 								<div className="card-body">
 									<FaStarOfDavid className="fs-1 text-danger mb-3"></FaStarOfDavid>
@@ -50,7 +50,7 @@ const AmazingVideo = () => {
 								</div>
 							</div>
 						</div>
-						<div className="col-md-3">
+						<div className="col-md-6 col-lg-3 p-2">
 							<div className="card bg-dark py-4 shadow-lg">
 								<div className="card-body">
 									<FaVideo className="fs-1 text-danger mb-3"></FaVideo>
