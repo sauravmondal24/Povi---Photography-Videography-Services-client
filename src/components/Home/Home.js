@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import Packages from './Packages/Packages';
 import Contact from './Contact/Contact';
 import AmazingVideo from './AmazingVideo/AmazingVideo';
+import LatestWork from './LatestWork/LatestWork';
 
 const Home = () => {
 	useTitle('Home');
@@ -45,6 +46,7 @@ const Home = () => {
 				</div>
 			</div>
 			<AmazingVideo></AmazingVideo>
+			<LatestWork></LatestWork>
 			<Packages></Packages>
 			<Contact></Contact>
 		</div>
