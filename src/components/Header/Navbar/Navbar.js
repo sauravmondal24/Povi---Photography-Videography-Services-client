@@ -39,7 +39,7 @@ const Navbar = () => {
 						<ul className="navbar-nav m-auto mb-2 mb-lg-0 ">
 							<li className="nav-item">
 								<Link
-									className="nav-link active text-light fs-5"
+									className="nav-link active text-light fs-5 px-3"
 									aria-current="page"
 									to="/"
 								>
@@ -47,24 +47,27 @@ const Navbar = () => {
 								</Link>
 							</li>
 							<li className="nav-item">
-								<Link to="/blog" className="nav-link text-white fs-5">
+								<Link to="/blog" className="nav-link text-white fs-5 px-3">
 									Blog
 								</Link>
 							</li>
 							<li className="nav-item">
-								<Link to="/services" className="nav-link text-white fs-5">
+								<Link to="/services" className="nav-link text-white fs-5 px-3">
 									Services
 								</Link>
 							</li>
 							<li className="nav-item">
-								<Link to="/addservices" className="nav-link text-white fs-5">
+								<Link
+									to="/addservices"
+									className="nav-link text-white fs-5 px-3"
+								>
 									Add Services
 								</Link>
 							</li>
 							<li className="nav-item">
 								<Link
 									to="/myreviews"
-									className="nav-link text-white fs-5"
+									className="nav-link text-white fs-5 px-3"
 									href="#"
 								>
 									My Reviews

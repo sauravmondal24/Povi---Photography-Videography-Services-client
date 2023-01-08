@@ -9,12 +9,12 @@ const ServicesItem = ({ serviceItem }) => {
 		<PhotoProvider>
 			<div>
 				<div
-					style={{ height: '450px', backgroundColor: '#ededed' }}
+					style={{ height: '400px', backgroundColor: '#ededed' }}
 					className="card  text-dark my-2 p-3 shadow-lg m-2 "
 				>
 					<PhotoView src={photoULR}>
 						<img
-							style={{ height: '400px', width: '100%' }}
+							style={{ height: '500px', width: '100%' }}
 							src={photoULR}
 							className="img-fluid card-img-top"
 							alt="..."

@@ -12,7 +12,12 @@ const ServiceDetails = () => {
 				<div className="row text-start text-light">
 					<div className="col-md-6">
 						<div className="card shadow text-start p-4">
-							<img className="img-fluid" src={photoULR} alt="" />
+							<img
+								style={{ height: '350px', width: '100%' }}
+								className="img-fluid"
+								src={photoULR}
+								alt=""
+							/>
 						</div>
 					</div>
 					<div className="col-md-6">

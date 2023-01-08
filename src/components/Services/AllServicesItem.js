@@ -14,7 +14,7 @@ const AllServicesItem = ({ service }) => {
 					>
 						<PhotoView src={photoULR}>
 							<img
-								style={{ height: '250px' }}
+								style={{ height: '400px' }}
 								src={photoULR}
 								className="img-fluid card-img-top"
 								alt="..."
